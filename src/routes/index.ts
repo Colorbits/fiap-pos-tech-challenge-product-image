@@ -7,6 +7,6 @@ indexRoute.get("", async (req, res) => {
   res.json({ message: "FIAP Post Tech Challenge: product images" });
 });
 
-indexRoute.use("/product-images", productImageRoutes);
+indexRoute.use("/product-image", productImageRoutes);
 
 export default indexRoute;
