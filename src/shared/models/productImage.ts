@@ -8,7 +8,7 @@ export interface ProductImageDto {
 export class ProductImage {
   id?: string;
   productId: number;
-  filename: string;
+  filename?: string;
   path: string;
 
   constructor(productImageDto: ProductImage) {
