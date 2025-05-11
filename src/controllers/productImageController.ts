@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import * as productImageService from '../services/productImageService';
-import formidable, { errors as formidableErrors } from 'formidable';
+import formidable from 'formidable';
 import path from 'path';
 import fs from 'fs';
 
@@ -45,10 +45,6 @@ export const getProductImageDetails = async (req: Request, res: Response) => {
     const { productId } = req.params;
     const productImage = await productImageService.getImagesByproductId(productId);
 
-    if (!productImage) {
-      return res.status(404).json({ error: 'Imagem do produto não encontrada' });
-    }
-
     res.status(200).json(productImage);
   } catch (error) {
     res.status(500).json({ error: 'Erro ao buscar imagem de produto' });
@@ -66,6 +62,7 @@ export const getImage = async (req: Request, res: Response) => {
 
     res.sendFile(productImage.path);
   } catch (error) {
+    console.error(error)
     res.status(500).json({ error: 'Erro ao buscar imagem de produto' });
   }
 };
