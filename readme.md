@@ -1,4 +1,4 @@
-# Documentação - Tech Challenge FIAP Customer Microservice
+# Documentação - Tech Challenge FIAP Product Image Microservice
 
 
 ## Running Instructions
