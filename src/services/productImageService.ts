@@ -1,9 +1,6 @@
 import prisma from '../client';
 import { ProductImageDto } from '../shared/models/productImage';
 
-// Remove a instância direta do PrismaClient
-// const prisma = new PrismaClient();
-
 export const createProductImageService = async (productImageDto: ProductImageDto) => {
   return prisma.productImage.create({
     data: {
