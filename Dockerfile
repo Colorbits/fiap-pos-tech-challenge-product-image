@@ -17,7 +17,7 @@ RUN npm ci
 RUN npm run build
 
 # Por padrão o projeto executa na porta 3001.
-EXPOSE 3001
+EXPOSE 3003
 
 ## Start the server using the production build
 CMD [ "node", "dist/index.js" ]
