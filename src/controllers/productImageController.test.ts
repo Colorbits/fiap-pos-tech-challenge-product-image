@@ -15,7 +15,7 @@ const res: any = {
 };
 
 beforeAll(() => {
-  server = app.listen(3001);
+  server = app.listen(3003);
 });
 
 afterAll(() => {
