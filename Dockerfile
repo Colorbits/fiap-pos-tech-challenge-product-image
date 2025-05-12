@@ -16,7 +16,7 @@ RUN npm ci
 ## Buildando o projeto
 RUN npm run build
 
-# Por padrão o projeto executa na porta 3000.
+# Por padrão o projeto executa na porta 3001.
 EXPOSE 3001
 
 ## Start the server using the production build
